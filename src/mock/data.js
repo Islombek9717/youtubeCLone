@@ -20,7 +20,7 @@ export const data = [
   {
     id: 1,
     title: "The Game",
-    category: "Comedy",
+    category: "Game",
     user: `${user1}`,
     img: `${youtube1}`,
     description: "The game channel",
@@ -50,7 +50,7 @@ export const data = [
     category: "Comedy",
     user: `${user4}`,
     img: `${youtube4}`,
-    description: "The comedy channel",
+    description: "The Comedy channel",
     status: `${online}`,
   },
   {
@@ -59,7 +59,7 @@ export const data = [
     category: "Course",
     user: `${user5}`,
     img: `${youtube5}`,
-    description: "The course channel",
+    description: "The Course channel",
     status: `${online}`,
   },
   {
@@ -86,15 +86,15 @@ export const data = [
     category: "Course",
     user: `${user1}`,
     img: `${youtube8}`,
-    description: "The course channel",
+    description: "The Course channel",
   },
   {
     id: 9,
     title: "The Game",
-    category: "Comedy",
+    category: "Game",
     user: `${user1}`,
     img: `${youtube1}`,
-    description: "The game channel",
+    description: "The Game channel",
     status: `${live}`,
   },
   {
@@ -121,7 +121,7 @@ export const data = [
     category: "Comedy",
     user: `${user4}`,
     img: `${youtube4}`,
-    description: "The comedy channel",
+    description: "The Comedy channel",
     status: `${online}`,
   },
 ];

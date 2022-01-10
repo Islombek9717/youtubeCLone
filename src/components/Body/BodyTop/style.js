@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const Category = styled.div`
-  display: flex;
-  align-items: center;
   width: 1296px;
   height: 56px;
   background: #212121;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
   justify-content: center;
   position: fixed;
 `;
+
 Category.Btn = styled.button`
   font-weight: normal;
   font-size: 14px;
