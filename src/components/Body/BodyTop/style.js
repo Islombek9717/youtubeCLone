@@ -23,7 +23,7 @@ Category.Btn = styled.button`
   color: #fff;
   cursor: pointer;
   margin-right: 12px;
-  &:active {
+  &:focus {
     background: #fff;
     color: #000;
     border: 1px solid #fff;

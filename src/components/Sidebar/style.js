@@ -48,12 +48,16 @@ export const StyledLink = styled(NavLink)`
   border: none;
   background: #212121;
   text-decoration: none;
-
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-left: 24px;
   &:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  &.${(props) => props.activeClassName} {
+  /* &.${(props) => props.isActive} {
     svg {
       path {
         opacity: 1;
@@ -65,7 +69,7 @@ export const StyledLink = styled(NavLink)`
       opacity: 1;
       color: red;
     }
-  }
+  } */
 `;
 
 SideBar.Heading = styled.div`

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Category } from "./style";
 import { data } from "../../../mock/data";
 import { MovieContext } from "../../../context/movie";

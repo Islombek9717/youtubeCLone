@@ -1,61 +1,33 @@
 import React, { useContext } from "react";
 import { SideBar } from "./style";
 import { MovieContext } from "../../context/movie";
+import "./sidebar.css";
 
-import Home from "../../assets/libs/Home";
-import Explore from "../../assets/libs/Explore";
-import Subscription from "../../assets/libs/Subscriptions";
-import Library from "../../assets/libs/Library";
-import History from "../../assets/libs/History";
-import YourVideos from "../../assets/libs/YourVideos";
-import WatchLater from "../../assets/libs/WatchLater";
-import Liked from "../../assets/libs/Liked";
-import More from "../../assets/libs/More";
-import { StyledLink } from "./style";
+import { NavLink } from "react-router-dom";
+import { sidebar } from "../../mock/sidebar";
+import { ReactComponent as ShowMoreSvg } from "../../assets/icons/downarrow.svg";
 
 const Sidebar = () => {
   const [state] = useContext(MovieContext);
   return (
     <SideBar>
-      <StyledLink activeClassName="any" exact to="/">
-        <Home />
-        <SideBar.Heading>Home</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/explore">
-        <Explore />
-        <SideBar.Heading>Explore</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/subscriptions">
-        <Subscription />
-        <SideBar.Heading>Subscriptions</SideBar.Heading>
-      </StyledLink>
+      {sidebar.map(({ id, title, path, svg: Svg, icons: Icon }) => (
+        <NavLink
+          className="Link"
+          key={id}
+          style={({ isActive }) => ({
+            color: isActive ? "red" : "white",
+          })}
+          to={path}
+          children={({ isActive }) => ({
+            fill: isActive ? "red" : "white",
+          })}
+        >
+          <Svg />
 
-      <SideBar.Line />
-
-      <StyledLink activeClassName="any" to="/library">
-        <Library />
-        <SideBar.Heading>Library</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/history">
-        <History />
-        <SideBar.Heading>History</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/yourvideos">
-        <YourVideos />
-        <SideBar.Heading>Your videos</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/watchlater">
-        <WatchLater />
-        <SideBar.Heading>Watch Later</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/likedvideos">
-        <Liked />
-        <SideBar.Heading>Liked videos</SideBar.Heading>
-      </StyledLink>
-      <StyledLink activeClassName="any" to="/showmore">
-        <More />
-        <SideBar.Heading>Show more</SideBar.Heading>
-      </StyledLink>
+          {title}
+        </NavLink>
+      ))}
 
       <SideBar.Line />
 
@@ -72,7 +44,7 @@ const Sidebar = () => {
         );
       })}
       <SideBar.ShowMore>
-        <More />
+        <ShowMoreSvg />
         <SideBar.Heading>Show more</SideBar.Heading>
       </SideBar.ShowMore>
 
